@@ -62,3 +62,8 @@ group :development do
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
 
+# For user
+gem "devise"
+
+# For AWS S3
+gem "aws-sdk-s3", require: false
