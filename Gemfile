@@ -67,3 +67,9 @@ gem "devise"
 
 # For AWS S3
 gem "aws-sdk-s3", require: false
+
+# Bug
+gem "pry-byebug"
+
+
+gem 'simple_form'

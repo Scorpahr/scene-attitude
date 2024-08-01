@@ -1,27 +1,27 @@
-<div class="form">
-  <form >
+<%# <div class="form">
+  <form method="post">
     <div class="row">
       <div class="col-25">
-        <label for="date">Date de l'événement</label>
+        <label for="dateofevent">Date de l'événement</label>
       </div>
       <div class="col-75">
-        <input type="date" id="date" name="date" placeholder="Date..">
+        <input type="date" id="dateofevent" name="dateofevent" placeholder="Date..">
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="picture">Affiche</label>
+        <label for="file">Affiche</label>
       </div>
       <div class="col-75">
-        <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" />
+        <input type="file" id="file" name="file" accept="image/png, image/jpeg" />
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="description">Description</label>
+        <label for="subject">Description</label>
       </div>
       <div class="col-75">
-        <textarea id="description" name="description" placeholder="Déscription de l'événement.." style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Déscription de l'événement.." style="height:200px"></textarea>
       </div>
     </div>
     <br>
@@ -29,4 +29,26 @@
       <input type="submit" value="Enregistrer">
     </div>
   </form>
+</div> %>
+
+
+<div class="bg-form ">
+  <%= simple_form_for Event.new do |f| %>
+    <div class="form-type">
+      <%= f.input :date, input_html: { data: { controller: "datepicker" }}, label: "Date de l'événement :" %>
+    </div>
+
+    <div class="form-type">
+      <%= f.input :picture, as: :file, label: "Ajouter une affiche :" %>
+    </div>
+
+    <div class="form-type">
+      <label>* Description de l'événement :</label>
+      <%= f.text_area :description, label: "Description de l'événement :" %>
+    </div>
+
+    <div class="txt-col button-env">
+      <%= f.submit "Ajouter" %>
+    </div>
+  <% end %>
 </div>
