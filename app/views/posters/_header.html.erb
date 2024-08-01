@@ -1,4 +1,7 @@
 <div class="container">
+  <% if current_user %>
+    <%= button_to "Déconnexion", destroy_user_session_path, method: :delete , class: "button-style" %>
+  <% end %>
   <%= link_to (image_tag('logo-scene-attitude', class: 'image_responsive')), new_user_session_path, method: :get %>
   <div class="dropdown">
     <button class="mainmenubtn"><%= image_tag 'menu' %></button>
