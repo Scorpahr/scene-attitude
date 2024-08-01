@@ -1,0 +1,11 @@
+<div class="container">
+  <%= @event.date  %>
+  <div class="card">
+    <%= @event.description %>
+  </div>
+  <div class="card">
+    <% if @event.picture %>
+      <img src="<%= @event.picture %>" class="image">
+    <% end %>
+  </div>
+</div>

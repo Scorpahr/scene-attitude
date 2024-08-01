@@ -1,4 +1,4 @@
-<div class="form">
+<%# <div class="form">
   <form method="post">
     <div class="row">
       <div class="col-25">
@@ -29,4 +29,25 @@
       <input type="submit" value="Enregistrer">
     </div>
   </form>
+</div> %>
+
+<div class="bg-form ">
+  <%= simple_form_for Poster.new do |f| %>
+    <div class="form-type">
+      <%= f.input :date_event, input_html: { data: { controller: "datepicker" }}, label: "Date de l'événement :" %>
+    </div>
+
+    <div class="form-type">
+      <%= f.input :picture, as: :file, label: "Ajouter une affiche :" %>
+    </div>
+
+    <div class="form-type">
+      <label>* Description de l'événement :</label><br>
+      <%= f.text_area :content, label: "Description de l'événement :", id: 'textarea' %>
+    </div>
+
+    <div class="txt-col button-env">
+      <%= f.submit "Ajouter" %>
+    </div>
+  <% end %>
 </div>
