@@ -2,12 +2,18 @@
 <div class="container" id="presentation">
   <%= render 'presentation' %>
 </div>
-<div class="containerbis" id="event" data-controller='event'>
+<div class="containerbis" id="event" data-controller='form'>
   <h2>Prochain événement</h2>
+  <% if current_user %>
+    <%= render 'form_event' %>
+  <% end %>
 
 </div>
 <div class="container" id="production">
   <h2>Anciennes pièces jouées</h2>
+  <% if current_user %>
+    <%= render 'form_production' %>
+  <% end %>
 </div>
 <div class="containerbis" id="contact">
   <h2>Pour nous contacter</h2>
