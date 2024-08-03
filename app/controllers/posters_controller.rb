@@ -1,7 +1,7 @@
 class PostersController < ApplicationController
   def index
     @contact = Contact.last
-    @posters = Poster.all
+    @posters = Poster.all.reverse
     @event = Event.last
   end
 

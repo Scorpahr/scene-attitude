@@ -5,8 +5,4 @@ import flatpickr from "flatpickr";
 export default class extends Controller {
   connect() {
   }
-
-  toggle(event) {
-    
-  }
 }
