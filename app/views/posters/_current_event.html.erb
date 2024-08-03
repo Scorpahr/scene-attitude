@@ -1,11 +1,19 @@
+
 <div class="container">
-  <%= @event.date  %>
-  <div class="card">
-    <%= @event.description %>
-  </div>
-  <div class="card">
-    <% if @event.picture %>
-      <img src="<%= @event.picture %>" class="image">
-    <% end %>
-  </div>
+  <p style="font-weight: bold; font-size: 20px;">
+    <%= @event.date  %>
+  </p>
+  <% if @event.picture %>
+    <div class="card2">
+      <%= @event.description.gsub(".", ".\n") %>
+    </div>
+    <div class="card2">
+      <%# <img src="<%= @event.picture >" class="image"> %>
+      <%= image_tag '1 - Mariage', class: "image" %>
+    </div>
+  <% else %>
+    <div class="card2">
+      <%= @event.description.gsub(".", ".\n") %>
+    </div>
+  <% end %>
 </div>
