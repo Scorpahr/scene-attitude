@@ -22,3 +22,8 @@
   line-height: 28px;
   white-space: pre-line;
 }
+
+.card3 {
+  display: inline-block;
+  vertical-align: middle;
+}

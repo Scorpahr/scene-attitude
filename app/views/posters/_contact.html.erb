@@ -1,5 +1,5 @@
 <h2>Pour nous contacter</h2>
-<div class="left">
+<div class="card3">
   <p>📱 <%= @contact.phone %></p>
   <p>📧 <%= @contact.email %></p>
   <p>
@@ -10,6 +10,6 @@
   <%= @contact.address %>
   </p>
 </div>
-<div class="right">
-  <%= image_tag 'espace-gandil' %>
+<div class="card3">
+  <%= link_to (image_tag('espace-gandil', class: 'maps')), "https://www.google.fr/maps/place/Espace+Mus%C3%A9al+De+Gandil/@45.7336424,4.9997372,17z/data=!3m1!4b1!4m6!3m5!1s0x47f4c666a4bd4361:0x24db01972c79d4c4!8m2!3d45.7336387!4d5.0023121!16s%2Fg%2F11mbpjp5j5?entry=ttu", target: '_blank' %>
 </div>
