@@ -9,11 +9,12 @@
   background-color: #776B5D;
   }
 .dropdown {
-  float: right;
+  right: 8px;
   margin-top: 2%;
   padding: 0 3% 3% 0;
-  position: relative;
+  position: absolute;
   display: inline-block;
+  z-index: 10;
 }
 .dropdown-child {
   display: none;
