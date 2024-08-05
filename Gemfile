@@ -73,3 +73,5 @@ gem "pry-byebug"
 
 
 gem 'simple_form'
+
+gem "tty-screen"

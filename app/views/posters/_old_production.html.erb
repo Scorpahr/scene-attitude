@@ -1,7 +1,7 @@
 <div class="container">
   <% @posters.each do |poster| %>
     <div class="card">
-      <% if poster.id.odd? %>
+    <% if TTY::Screen.width < 80  %>
         <div class="card2">
           <p style="font-size: 20px;">
             Pièce joué le
@@ -16,25 +16,40 @@
           <%= image_tag '1 - Mariage', class: "image" %>
         </div>
         <br>
-      <% else %>
-        <div class="card2">
-          <%# <img src="<%= poster.picture >" class="image"> %>
-          <%= image_tag '1 - Mariage', class: "image" %>
-        </div>
-        <div class="card2">
-          <p style="font-size: 20px;">
-            Pièce joué le
-            <%= poster.date_event %>
-          </p>
-          <p>
-            <%= poster.content.gsub(".", ".\n") %>
-          </p>
-
-        </div>
-        <br>
+    <% else %>
+        <% if poster.id.odd? %>
+          <div class="card2">
+            <p style="font-size: 20px;">
+              Pièce joué le
+              <%= poster.date_event %>
+            </p>
+            <p>
+              <%= poster.content.gsub(".", ".\n") %>
+            </p>
+          </div>
+          <div class="card2">
+            <%# <img src="<%= poster.picture >" class="image"> %>
+            <%= image_tag '1 - Mariage', class: "image" %>
+          </div>
+          <br>
+        <% else %>
+          <div class="card2">
+            <%# <img src="<%= poster.picture >" class="image"> %>
+            <%= image_tag '1 - Mariage', class: "image" %>
+          </div>
+          <div class="card2">
+            <p style="font-size: 20px;">
+              Pièce joué le
+              <%= poster.date_event %>
+            </p>
+            <p>
+              <%= poster.content.gsub(".", ".\n") %>
+            </p>
+          </div>
+          <br>
+        <% end %>
       <% end %>
     </div>
   <% end %>
 
 </div>
-
