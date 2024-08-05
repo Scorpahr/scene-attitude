@@ -1,8 +1,10 @@
-<%= render 'header' %>
+<div class="container">
+  <%= render 'header' %>
+</div>
 <div class="container" id="presentation">
   <%= render 'presentation' %>
 </div>
-<div class="containerbis" id="event" data-controller='form'>
+<div class="containerbis" id="event">
   <h2>Prochain événement</h2>
   <% if current_user %>
     <%= render 'form_event' %>

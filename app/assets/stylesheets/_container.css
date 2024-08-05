@@ -11,17 +11,29 @@
   margin-right: auto;
   background-color: #EBE3D5;
   width: 70%;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
-.card2 {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 8px 3%;
-  width: 35%;
-  line-height: 28px;
-  white-space: pre-line;
+@media only screen
+and (max-device-width : 1024px) {
+  .card2 {
+    line-height: 28px;
+    white-space: pre-line;
+  }
 }
+
+@media only screen
+and (min-device-width : 1024px) {
+  .card2 {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 3%;
+    width: 35%;
+    line-height: 28px;
+    white-space: pre-line;
+  }
+}
+
 
 .card3 {
   display: inline-block;
